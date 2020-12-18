@@ -25,3 +25,17 @@ const img2 = document.getElementsByClassName('img2')[0];
 
 img1.setAttribute('src', player1);
 img2.setAttribute('src', player2);
+
+const winner = (p1,p2) => {
+  const board = document.getElementsByTagName('h1')[0];
+
+  if (p1 > p2) {
+    board.textContent = 'Player 1 Win';
+  } else if ( p1 < p2) {
+    board.textContent = 'Player 2 win'
+  } else {
+    board.textContent = 'Draw!'
+  }
+}
+
+winner(num1,num2);
